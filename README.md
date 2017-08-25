@@ -86,10 +86,10 @@ $ npm start
 
 You can view the GraphiQL UI at `http://localhost:8080/graphql`.
 
-If you'd like more information on using `express-graphql`, you can find great docs [here](http://graphql.org/graphql-js/running-an-express-graphql-server/) and [here](https://github.com/graphql/express-graphql)
+If you'd like more information on using `express-graphql`, you can find great docs [here](http://graphql.org/graphql-js/running-an-express-graphql-server/) and [here](https://github.com/graphql/express-graphql).
 
-You can make a request in the GraphiQL UI like this:
-
+#### GraphiQL Example Requests
+**FETCH TODOS**
 ```
 {
   fetchTodos {
@@ -99,13 +99,50 @@ You can make a request in the GraphiQL UI like this:
   }
 }
 ```
-_or_
+
+**FETCH TODO**
 ```
 {
   fetchTodo(id: 1) {
     id
     text
     complete
+  }
+}
+```
+
+**CREATE TODO**
+```
+mutation {
+  createTodo(input: {
+    text: "get groceries",
+  }) {
+    id
+    text
+    complete
+  }
+}
+```
+
+**UPDATE TODO**
+```
+mutation {
+  updateTodo(input: {
+    id: 2
+    text: "get paint for the bedroom"
+  }) {
+    id
+    text
+    complete
+  }
+}
+```
+
+**DESTROY TODO**
+```
+mutation {
+  destroyTodo(id: 4) {
+    id
   }
 }
 ```

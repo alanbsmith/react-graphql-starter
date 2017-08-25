@@ -6,8 +6,20 @@ const schema = buildSchema(`
     fetchTodo(id: ID!): Todo,
   }
 
+  type Mutation {
+    createTodo(input: TodoInput!): Todo,
+    updateTodo(input: TodoInput!): Todo,
+    destroyTodo(id: ID!): Todo,
+  }
+
   type Todo {
-    id: Int,
+    id: ID,
+    text: String,
+    complete: Boolean,
+  }
+
+  input TodoInput {
+    id: ID,
     text: String,
     complete: Boolean,
   }
