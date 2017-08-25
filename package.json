@@ -1,0 +1,23 @@
+{
+  "name": "react-graphql-starter",
+  "version": "0.0.1",
+  "description": "a small starter for React + Express + GraphQL",
+  "main": "server.js",
+  "scripts": {
+    "knex": "knex",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Alan Smith <a.bax.smith@gmail.com> (https://github.com/alanbsmith)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "express-graphql": "^0.6.7",
+    "graphql": "^0.10.5",
+    "knex": "^0.13.0",
+    "nodemon": "^1.11.0",
+    "pg": "^7.1.2"
+  }
+}
